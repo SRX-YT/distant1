@@ -15,8 +15,8 @@
           {% if task.date.pk == date.pk %}
           <div class="tasks">
             <div class="task-{{ task.pk }} task">
+              <span class="nom">Задание {{ task.num_task }}.<span>
               <p class="text-task">
-                Задание {{ task.num_task }}.
                 {{ task.text_task|linebreaksbr }}
               </p>
               <div class="code">
@@ -28,8 +28,10 @@
         {% endfor %}
       {% else %}
         <h1 class="warning">Чтобы увидеть решения войдите или зарегистрируйтесь</h1>
-        <a href="{% url 'account_login' %}" class="log">Войти</a>
-        <a href="{% url 'account_signup' %}" class="reg">Зарегистрироваться</a>
+        <div class="rigging">
+          <a href="{% url 'account_login' %}" class="log">Войти</a>
+        <a href="{% url 'account_signup' %}" class="regin">Зарегистрироваться</a>
+        </div> 
       {% endif %}
   </div>
   {% endfor %}
@@ -37,8 +39,9 @@
 
 <section class="date-example">
   {% for date in dates %}
+  <div>
     <button class='date-btn date-{{ date.pk }}'>{{ date }}</button>
-  {% endfor %}
-  <a href="https://yandex.ru/images/search?from=tabbar&text=%D0%BA%D0%BE%D1%82%D0%B8%D0%BA%D0%B8" class='relaxation' target="_blank">Отдохнуть от<br>вот этого всего</a>
+  </div>
+  {% endfor %} 
 </section>
 {% endblock %}

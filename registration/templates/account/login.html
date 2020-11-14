@@ -15,7 +15,8 @@
 
   {% get_providers as socialaccount_providers %}
 
-  <form class="login" method="POST" action="{% url 'account_login' %}">
+
+  <form class="logining" method="POST" action="{% url 'account_login' %}">
     {% csrf_token %}
     {% for l in form %}
       <div class="unit">

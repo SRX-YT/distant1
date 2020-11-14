@@ -1,112 +1,100 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    user-select: none;
-    outline: none;
-    /* background-color: darkgrey; */
-}
-
-html {
-    height: 100%;
-}
-
 body {
-    height: 100%;
-    background-color: darkslategrey;
-    display: flex;
-    flex-direction: column;
-}
-
-.header, .footer {
-    flex: 0 0 auto;
-}
-
-.header {
-    height: 60px;
-    margin-bottom: 25px;
-    background-color: rgba(46, 126, 46, 0.8);
-    display: flex;
-    align-items: center;
-}
-
-.main {
-    display: flex;
-    width: 100%;
-    /* height: 100%; */
-    flex: 1 0 auto;
-}
-
-.footer {
-    height: 20px;
-    margin-top: 25px;
-    background-color: rgba(8, 44, 8, 0.8);
-}
-
-.example, .date-example {
-    height: max-content;
-    margin: 0 2%;
-    border: 1px solid silver;
-    border-radius: 20px;
-    background-color: rgba(126, 225, 127, 0.6);
-}
-
-.example {
-    /* height: 1000px; */
-    width: 60%;
-}
-
-.date-example {
-    position: fixed;
-    left: 66%;
-    width: 30%;
-    font-size: 30px;
-}
-
-.logo {
-    width: 50px;
-    height: 50px;
-    margin-left: 30px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000;
 }
 
 nav {
     display: flex;
-    flex: auto;
-    flex-direction: row-reverse;
+    justify-content: space-between;
+    background-color: #fff;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
-nav a {
-    margin: auto 30px;
+a {
     text-decoration: none;
-    color: rgb(120, 24, 175);
-    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
 }
 
-nav a:hover {
-    color: rgb(81, 14, 87);
+main {
+    margin-top: 75px;
+    margin-bottom: 100px;
+}
+
+footer {
+    color: #fff;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.center {
+    text-align: center;
+}
+
+.btn {
+    border: 1px solid #000;
+    border-radius: 40px;
+    padding: 5px 10px; 
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    padding: 5px 0;
+    position: relative;
+    top: 3px;
 }
 
 .user {
-    padding-left: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .user p {
-    display: inline-block;
-    padding: 10px;
-    color: rgb(120, 24, 175);
-    font-size: 22px;
+    font-weight: 500;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-right: 20px;
 }
 
 .user a {
-    text-decoration: none;
-    color: rgb(35, 15, 46);
-    font-size: 22px;
-}
-
-.user a:hover {
-    color: rgb(167, 63, 177);
+    color: #000;
+    font-weight: 500;
+    font-size: 18px;
 }
 
 .login {
-    padding-right: 20px;
+    margin-left: 30px;
+}
+
+.reg {
+    margin-left: 20px;
+}
+
+#notauth a{
+    margin-left: 20px;
+}
+
+.main {
+    color: #fff;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+}
+
+.disabled {
+    display: none;
+}
+
+.btnanim:hover {
+    transition: 0.5s
+    background-color: white;
+    color: black;
 }

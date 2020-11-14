@@ -1,149 +1,72 @@
-.small-menu {
-    display: none;
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
-    margin-right: 20px;
-}
-
-.date-example .date-btn {
-    margin: 20px auto;
-    border: 0px;
-    background: transparent;
-    display: block;
-    font-size: inherit;
-    color: rgb(150, 125, 197);
-}
-
-.block-task {
-    /* border: 1px solid red; */
-    border-radius: 20px;
-    margin: 20px;
-    padding: 10px;
-    background-color: rgba(64, 87, 59, 1);
-}
-
-.date {
-    text-align: center;
-    color: blueviolet;
-    font-size: 30px;
-}
-
-.tasks {
-    /* border: 1px solid silver; */
-    /* border-radius: 10px; */
-    padding: 5px;
-    /* background-color: rgba(128, 128, 128, 0.8); */
-}
-
-.task {
-    border: 1px solid yellow;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 3px;
-    background-color: teal;
-}
-
-.text-task {
-    border-bottom: 2px solid black;
-}
-
-.code {
-    color: rgb(231, 216, 195);
-}
-
-pre {
-    user-select: all;
-    white-space: pre-wrap;
-    border: 1px solid bisque;
-    padding: 5px;
-    margin: 5px;
-    border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.disabled {
-    display: none;
-}
-
-.date-btn:hover {
-    cursor: pointer;
-    color: rgb(121, 19, 216);
-}
-
-.date-example .active {
-    color: rgb(83, 5, 83);
-}
-
-.footer p {
-    margin: auto;
-    padding-left: 20px;
-}
-
-.no-homework {
-    display: block;
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    border-radius: 30px;
-}
-
-.relaxation {
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    color: rgb(92, 30, 92);
-    font-size: inherit;
-}
-
-.relaxation:hover {
-    color: rgb(58, 19, 58);
-}
-
-.info-page {
-    width: 100%;
-    margin: 0 15px;
-    padding: 15px;
-    border: 1px solid silver;
-    border-radius: 20px;
-    text-align: center;
-    background-image: url(/static/images/warning.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom center;
-    background-color: rgba(35, 78, 35, 0.5);
-}
-
-.info-page h1 {
-    font-size: 40px;
-    color: floralwhite;
-    text-align: center;
+* {
+    margin: 0;
+    padding: 0;
 }
 
 .info-page p {
-    text-align: left;
-    font-size: 19px;
-    color: rgb(168, 130, 59);
-    border-bottom: 1px solid black;
+    line-height: 50px;
 }
 
-.warning {
-    font-size: 20px;
-    color: rgb(43, 24, 43);
+.code {
+    margin: 30px 0;
+    background-color: #fff;
+    width: 900px;
 }
 
-.log, .reg {
-    margin: 15px;
-    display: inline-block;
-    font-size: 20px;
-    text-decoration: none;
-    color: rgb(54, 22, 53);
+.code pre {
+    color: #000;
 }
 
-.reg {
-    margin-left: 50px;
+.text-task {
+    background-color: #fff;
+    color: #000;
+    margin: 30px 0;
+    width: 900px;
 }
 
-.log:hover, .reg:hover {
-    color: rgb(153, 43, 175);
+.date {
+    margin-bottom: 30px;
+}
+
+.date-example {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-right: 30px;
+}
+
+.date-btn {
+    background-color:transparent;
+    border-radius:28px;
+    border:1px solid #fff;
+    display:inline-block;
+    cursor:pointer;
+    color:#fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size:18px;
+    padding:16px 60px;
+    text-decoration:none;
+    margin-bottom: 20px;
+}
+
+.log {
+    border: 1px solid #fff;
+    border-radius: 40px;
+    padding: 5px 10px;
+    color: white;
+}
+
+.regin {
+    border: 1px solid #fff;
+    border-radius: 40px;
+    padding: 5px 10px;
+    color: white;
+}
+
+.rigging {
+    margin: 30px 0;
+}
+.rigging a {
+    margin-right: 20px;
 }
