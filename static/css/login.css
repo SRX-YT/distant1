@@ -1,0 +1,216 @@
+.main {
+    flex-direction: column;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px 30px;
+    margin: 0 5%;
+}
+
+h1 {
+    color: rgb(99, 31, 145);
+    margin-bottom: 10px;
+}
+
+a {
+    color: inherit;
+    font-size: inherit;
+}
+
+.social {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 5px;
+    font-size: 20px;
+    color: #7023c5;
+    font-weight: bold;
+}
+
+.icon {
+    transition-duration: 300ms;
+    transition-timing-function: ease-out;
+    display: inline-block;
+    font-size: 26px;
+    border-radius: 50%;
+    padding: 8px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.vk-icon {
+    border: 2px solid #507299;
+    color: #507299;
+}
+
+.vk-icon:hover {
+    background-color:  #507299;
+    color: white;
+} 
+
+.ok-icon {
+    border: 2px solid #ee8208;
+    color: #ee8208;
+}
+
+.ok-icon:hover {
+    background-color:  #ee8208;
+    color: white;
+}
+
+.facebook-icon {
+    border: 2px solid #3578E5;
+    color: #3578E5;
+}
+
+.facebook-icon:hover {
+    background-color:  #3578E5;
+    color: white;
+}
+
+.yandex-icon {
+    border: 2px solid#ff0000;
+    color:#ff0000;
+}
+
+.yandex-icon:hover {
+    background-color:#ff0000;
+    color: white;
+}
+
+.google-icon {
+    border: 2px solid #507299;
+    color: rgb(66 133 244);
+}
+
+.google-icon:hover {
+    border-color: snow;
+    background: rgb(131,58,180);
+    background: linear-gradient(112deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(69,252,93,1) 100%);
+    color: rgb(52 168 83);
+}
+
+.steer {
+    margin: 4px;
+    color: rgb(167, 79, 226);
+    font-size: 18px;
+}
+
+.steer a {
+    color: rgb(92, 40, 94);
+}
+
+.steer a:hover {
+    color: rgb(56, 22, 50);
+    text-decoration: underline;
+}
+
+/* .unit {
+    display: block;
+} */
+
+.label {
+    display: inline-block;
+    color: rgb(174, 39, 192);
+    font-size: 19px;
+    width: 155px;
+    margin: 5px;
+    padding-left: 5px;
+}
+
+.input {
+    display: inline-block;
+}
+
+.errors {
+    display: inline-block;
+}
+
+.errorlist {
+    margin-left: 15px;
+    list-style: hebrew;
+}
+
+.support {
+    display: inline-block;
+    position: relative; /*обязательное параметр*/
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.support em {
+    background: #FF6600;
+    border-radius: 20px;
+    border: 1px solid #999;
+    text-align: center;
+    color: #FFF;
+    font: normal bold 16px Arial;
+    padding: 0 4px;
+}
+
+.tip,
+span.support::before/*если используется атрибут data-title*/ {
+    display: none;
+    position: absolute;
+    z-index: 9998;
+    top: 0;
+    left: 100%;
+    background: rgb(82, 157, 175);
+    text-align: left;
+    color: #802284;
+    cursor: default;
+    padding: 5px;
+    margin: -15px 0 0 10px;
+    width: 200px;
+    min-height: 50px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 15px;
+    font-size: 17px;
+}
+
+*:focus {
+    outline: none;
+}
+
+a.support:hover .tip {
+    display:block;
+}
+
+.secondaryAction {
+    display: inline-block;
+    color: rgb(102, 27, 86);
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.secondaryAction:hover {
+    color: rgb(66, 31, 57);
+}
+
+button {
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgb(88, 12, 88);
+    color: rgb(93, 160, 54);
+}
+
+.login {
+    color: rgb(61, 32, 52);
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.login:hover {
+    color: rgb(124, 75, 116);
+}
