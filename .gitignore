@@ -1,0 +1,10 @@
+*.pyc
+__pycache__
+venv
+/static
+.DS_Store
+.vscode
+db.sqlite3
+staitcfiles/
+*.dump
+/upgrade_mysite/settings.py

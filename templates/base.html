@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <link rel="shortcut icon" href="{% static 'images/fox.png' %}?31231312" type="image/x-icon">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  {% block static %}{% endblock %}
+  <title>{% block head_title %}Дистант{% endblock %}</title>
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+  <header class='header'>
+    <a href="{% url 'get' %}"><img src="{% static 'images/fox.png' %}" alt="Логотип" class="logo"></a>
+    {% if user.is_authenticated %}
+      <div class="user">
+        <p>Добро пожаловать: {{ user.first_name }}</p>
+        <a href="{% url 'account_logout' %}">Выйти</a>
+      </div>
+    {% else %}
+    <div class="user">
+      <a href="{% url 'account_login' %}" class="login">Войти</a>
+      <a href="{% url 'account_signup' %}">Зарегистрироваться</a>
+    </div>
+    {% endif %}
+    <nav>
+      <a href="{% url 'get' %}">Главная</a>
+      <a href="http://is.krmt.edu.ru/course/view.php?id=374" target="_blank">Задания</a>
+      <a href="{% url 'get_info' %}">О сайте</a>
+    </nav>
+    <div class="small-menu"></div>
+  </header>
+  <main class='main'>
+    {% block body %}
+      {% block content %}
+      {% endblock %}
+    {% endblock %}
+
+    {% block extra_body %}
+    {% endblock %}
+  </main>
+  <footer class='footer'>
+    <p>&copymilovanovv1@mail.ru</p>
+  </footer>
+
+
+  <script src="{% static 'js/jquery.js' %}"></script>
+  <script>
+    $(document).ready(function() {
+      if (location.href.slice(0, -1) == location.origin) {
+        $($('.date-example')[0].firstElementChild).addClass('active')
+        $($('.example')[0].firstElementChild).removeClass('disabled')
+  
+        for (var ex of $($('.example').children())) {
+          el = $(ex).children()
+          if (el.length < 2) {
+            $(ex).append($('<img>', {'src': "{% static 'images/ustal.png' %}" , 'class': 'no-homework'}))
+          }
+        }
+  
+        $('.date-btn').click(function() {
+          for (var btn of $(this).siblings()) {
+              $(btn).removeClass('active')
+          }
+          for (var ex of $('.example').children()) {
+            (ex.className.split(' ')[1] == $(this)[0].className.split(' ')[1]) ? $('.example .'+ex.className.split(' ')[1]).removeClass('disabled') : $('.example .'+ex.className.split(' ')[1]).addClass('disabled')
+          }
+          $(this).addClass('active')
+  
+          $("body,html").animate({
+            scrollTop:0
+          }, 800);
+          return false;
+        })  
+      }
+    });
+  </script>
+</body>
+</html>

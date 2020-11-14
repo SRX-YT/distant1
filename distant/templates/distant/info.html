@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block static %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="info-page">
+    <p>Сайт создан в учебных целях.</p>
+    <h1>Данный сайт не даёт 100% вероятности в правильности ответов!!!</h1>
+    <!-- <img src="{% static 'images/warning.png' %}" alt="" class='warning'> -->
+</div>
+{% endblock %}
